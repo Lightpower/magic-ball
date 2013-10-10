@@ -1,0 +1,139 @@
+@import "normalize";
+@import "compass/css3";
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  @include background-image(linear-gradient(color-stops(#49074e, #000 25%)));
+}
+
+#main {
+  width: 322px;
+  margin: 10% auto 0 auto;
+}
+
+.ball {
+  width: 322px;
+  height: 322px;
+
+  margin-bottom: 40px;
+
+  position: relative;
+}
+
+.highlights, .lights-lb, .lights-db, .lights-v, .lights-p {
+  width: 322px;
+  height: 322px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#question {
+  width: 322px - 4px - 8px;
+  padding: 4px;
+
+  background-color: #000;
+
+  @include border-radius(4px);
+  border: 2px solid #310533;
+  color: #58095C;
+}
+
+#answer {
+  width: 322px - 10px;
+  padding: 5px;
+
+  text-align: center;
+
+  color: #16599E;
+  text-shadow: #6E79FF 0 0 3px;
+}
+
+// Animations
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-ms-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-o-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.lights-lb, .lights-db, .lights-v, .lights-p {
+  -webkit-animation-name:            rotate;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+     -moz-animation-name:            rotate;
+     -moz-animation-iteration-count: infinite;
+     -moz-animation-timing-function: linear;
+      -ms-animation-name:            rotate;
+      -ms-animation-iteration-count: infinite;
+      -ms-animation-timing-function: linear;
+       -o-animation-name:            rotate;
+       -o-animation-iteration-count: infinite;
+       -o-animation-timing-function: linear;
+}
+
+.lights-lb {
+  -webkit-animation-duration: 70s;
+     -moz-animation-duration: 70s;
+      -ms-animation-duration: 70s;
+       -o-animation-duration: 70s;
+}
+
+.lights-db {
+  -webkit-animation-duration: 60s;
+     -moz-animation-duration: 60s;
+      -ms-animation-duration: 60s;
+       -o-animation-duration: 60s;
+}
+
+.lights-v {
+  -webkit-animation-duration: 50s;
+     -moz-animation-duration: 50s;
+      -ms-animation-duration: 50s;
+       -o-animation-duration: 50s;
+}
+
+.lights-p {
+  -webkit-animation-duration: 40s;
+     -moz-animation-duration: 40s;
+      -ms-animation-duration: 40s;
+       -o-animation-duration: 40s;
+}

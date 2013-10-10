@@ -1,0 +1,13 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: oracle_development
+  username: rails
+  password: rails
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: oracle_production
+  username: rails
+  password: "oulplthe"

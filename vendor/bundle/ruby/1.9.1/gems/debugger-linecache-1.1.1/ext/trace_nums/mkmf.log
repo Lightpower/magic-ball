@@ -1,0 +1,36 @@
+have_header: checking for vm_core.h... -------------------- no
+
+"gcc -o conftest -I/usr/include/ruby-1.9.1/x86_64-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I.    -march=x86-64 -mtune=generic -O2 -pipe -fPIC conftest.c  -L. -L/usr/lib -L. -Wl,--hash-style=gnu -Wl,--as-needed -rdynamic -Wl,-export-dynamic     -lruby-static  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+"gcc -E -I/usr/include/ruby-1.9.1/x86_64-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I.    -march=x86-64 -mtune=generic -O2 -pipe -fPIC  conftest.c -o conftest.i"
+conftest.c:3:21: фатальная ошибка: vm_core.h: Нет такого файла или каталога
+Компиляция прервана.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <vm_core.h>
+/* end */
+
+--------------------
+
+have_header: checking for vm_core.h... -------------------- no
+
+"gcc -E -I/usr/include/ruby-1.9.1/x86_64-linux -I/usr/include/ruby-1.9.1/ruby/backward -I/usr/include/ruby-1.9.1 -I. -I/usr/include/ruby-1.9.1/ruby-1.9.2-p180 -march=x86-64 -mtune=generic -O2 -pipe -fPIC  conftest.c -o conftest.i"
+conftest.c:3:21: фатальная ошибка: vm_core.h: Нет такого файла или каталога
+Компиляция прервана.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <vm_core.h>
+/* end */
+
+--------------------
+
